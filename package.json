@@ -1,29 +1,12 @@
 {
-  "_from": "rnrf-expo",
-  "_id": "rnrf-expo@1.0.0",
-  "_inBundle": false,
-  "_integrity": "sha512-3AA3yE4U3QS/AhQnZ7ZkQ65HM5uezqoHrjP9hWYJX0qiK6gf1EvMW9Sh+IzO6ozB4WfUHxbEKR/NmQcnRHhMfA==",
-  "_location": "/rnrf-expo",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "tag",
-    "registry": true,
-    "raw": "rnrf-expo",
-    "name": "rnrf-expo",
-    "escapedName": "rnrf-expo",
-    "rawSpec": "",
-    "saveSpec": null,
-    "fetchSpec": "latest"
+  "name": "rnrf-expo",
+  "version": "1.0.1",
+  "description": "**Bootstrap for [React Native Router Flux](https://github.com/aksonov/react-native-router-flux) and [Expo](https://docs.expo.io/).**",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/4s1r0c4t/rnrf-expo"
   },
-  "_requiredBy": [
-    "#USER",
-    "/"
-  ],
-  "_resolved": "https://registry.npmjs.org/rnrf-expo/-/rnrf-expo-1.0.0.tgz",
-  "_shasum": "4600deeca088ee67617eb51360fe9e37d78ff30b",
-  "_spec": "rnrf-expo",
-  "_where": "D:\\Apps\\rnrf-expo",
-  "bundleDependencies": false,
+  "license": "MIT",
   "dependencies": {
     "expo": "^25.0.0",
     "react": "16.2.0",
@@ -31,9 +14,5 @@
     "react-native-button": "^2.3.0",
     "react-native-router-flux": "^4.0.0-beta.28"
   },
-  "deprecated": false,
-  "description": "**Bootstrap for [React Native Router Flux](https://github.com/aksonov/react-native-router-flux) and [Expo](https://docs.expo.io/).**",
-  "main": "node_modules/expo/AppEntry.js",
-  "name": "rnrf-expo",
-  "version": "1.0.0"
+  "main": "node_modules/expo/AppEntry.js"
 }
