@@ -1,35 +1,41 @@
 import React from 'react';
-import {View, Text, StyleSheet} from "react-native";
-import Button from "react-native-button";
+import { StyleSheet } from "react-native";
+import { Container, Content, Text, Header, Body, Button, Title } from 'native-base';
 import {Actions} from "react-native-router-flux";
 
 var styles = StyleSheet.create({
     container: {
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#F5FCFF",
-    },
-    welcome: {
-        fontSize: 20,
-        textAlign: "center",
-        margin: 10,
-    },
-    instructions: {
-        textAlign: "center",
-        color: "#333333",
-        marginBottom: 5,
-    },
+        backgroundColor: "orange"
+      },
+      header: {
+        backgroundColor: 'black'
+      },
+      button: {
+        alignSelf: 'center'
+      }
 });
 
 class Home extends React.Component {
     render() {
         return (
-            <View style={styles.container}>
-                <Text>Home</Text>
-                <Button onPress={() => Actions.videos({lang: "en-CA"})}>English</Button>
-                <Button onPress={() => Actions.videos({lang: "pt-BR"})}>Portuguese</Button>
-            </View>
+            <Container style={styles.container}>
+                <Header style={styles.header}>
+                    <Body>
+                        <Title>Home Scene</Title>
+                    </Body>
+                </Header>
+                <Content>
+                    <Button transparent onPress={() => Actions.videos({lang: "en-CA"})}>
+                        <Text>Videos in English</Text>
+                    </Button>
+                    <Button transparent onPress={() => Actions.videos({lang: "fr-CA"})}>
+                        <Text>Vidéos en Français</Text>
+                    </Button>
+                    <Button transparent onPress={() => Actions.videos({lang: "pt-BR"})}>
+                        <Text>Vídeos em Português</Text>
+                    </Button>
+                </Content>
+            </Container>
         );
     }
 }

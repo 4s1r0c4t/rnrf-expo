@@ -1,27 +1,44 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import Button from 'react-native-button';
+import { StyleSheet } from 'react-native';
+import { Container, Content, Text, Header, Body, Button, Title } from 'native-base';
 import { Actions } from 'react-native-router-flux';
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: "orange"
   },
+  header: {
+    backgroundColor: 'black'
+  },
+  button: {
+    alignSelf: 'center'
+  }
 });
 
 export default class Settings extends React.Component {
   render() {
-    const title = this.props.title || 'No Title';
-    const data = this.props.data || 'No Data';
-    console.info('Sign-up Rendered');
-    return <View style={styles.container}>
-      <Text>Language Settings</Text>
-      <Button onPress={() => Actions.videos({lang: "pt-BR"})}>Portuguese</Button>
-      <Button onPress={() => Actions.videos({lang: "en-CA"})}>English</Button>
-      <Button onPress={Actions.pop}>Back</Button>
-    </View>
+    return (
+      <Container style={styles.container}>
+        <Header style={styles.header}>
+          <Body>
+            <Title>Settings scene</Title>
+          </Body>
+        </Header>
+        <Content>
+          <Button transparent onPress={() => Actions.videos({lang: "en-CA"})}>
+            <Text>Videos in English</Text>
+          </Button>
+          <Button transparent onPress={() => Actions.videos({lang: "fr-CA"})}>
+            <Text>Vidéos en Français</Text>
+          </Button>
+          <Button transparent onPress={() => Actions.videos({lang: "pt-BR"})}>
+            <Text>Vídeos em Português</Text>
+          </Button>
+          <Button rounded dark style={styles.button} onPress={Actions.pop}>
+            <Text>Back</Text>
+          </Button>
+        </Content>
+      </Container>
+    );
   }
 }

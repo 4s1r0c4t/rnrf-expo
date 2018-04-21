@@ -1,36 +1,48 @@
 import React from 'react';
-import {View, Text, StyleSheet} from "react-native";
-import Button from "react-native-button";
-import {Actions} from "react-native-router-flux";
+import { StyleSheet } from "react-native";
+import { Container, Content, Text, Header, Body, Button, Title, Card, CardItem } from 'native-base';
+import { Actions } from "react-native-router-flux";
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#F5FCFF",
+    backgroundColor: "orange"
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: "center",
-    margin: 10,
+  header: {
+    backgroundColor: 'black'
   },
-  instructions: {
-    textAlign: "center",
-    color: "#333333",
-    marginBottom: 5,
-  },
+  button: {
+    alignSelf: 'center'
+  }
 });
 
 export default class Videos extends React.Component {
   render() {
     const settingsTitle = (this.props.lang == 'pt-BR') ? 'Configurações' : 'Settings';
     return (
-      <View style={[styles.container, this.props.style]}>
-        <Text>Videos</Text>
-        <Button onPress={Actions.settings}>{settingsTitle}</Button>
-        <Button onPress={Actions.pop}>Back</Button>
-      </View>
+      <Container style={styles.container}>
+        <Header style={styles.header}>
+          <Body>
+              <Title>Videos Scene</Title>
+          </Body>
+        </Header>
+        <Content padder>
+          <Card>
+            <CardItem>
+              <Body>
+                <Text>
+                  This is the Videos scene with two buttons to either go to settings, or return to the Home scene.
+                </Text>
+              </Body>
+            </CardItem>
+          </Card>
+          <Button transparent onPress={Actions.settings}>
+              <Text>{settingsTitle}</Text>
+          </Button>
+          <Button rounded dark style={styles.button} onPress={Actions.pop}>
+              <Text>Return to Home Scene</Text>
+          </Button>
+        </Content>
+      </Container>
     );
   }
 }
