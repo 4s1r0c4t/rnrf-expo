@@ -9,7 +9,7 @@ View project published on Expo [here](https://expo.io/@reactappz/rnrf-expo).
 ## :bulb: Installation :bulb:
 ### Using Exp CLI
 ```
-$ git clone https://github.com/astrocatapps/rnrf-expo.git
+$ git clone https://github.com/webstaging/rnrf-expo.git
 $ cd rnrf-expo
 $ npm install
 $ npm install exp --global

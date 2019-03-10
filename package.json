@@ -1,6 +1,6 @@
 {
   "name": "rnrf-expo",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "**Bootstrap for [React Native Router Flux](https://github.com/aksonov/react-native-router-flux) and [Expo](https://docs.expo.io/).**",
   "repository": {
     "type": "git",
